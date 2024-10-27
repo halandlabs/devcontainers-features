@@ -1,0 +1,30 @@
+{
+    "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node",
+    "remoteUser": "node",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "updateContentCommand": "npm install --global @devcontainers/cli",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "json.schemas": [
+                    {
+                        "fileMatch": [
+                            "*/devcontainer-feature.json"
+                        ],
+                        "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
+                    }
+                ]
+            },
+            "extensions": [
+                "redhat.vscode-yaml",
+                "EditorConfig.EditorConfig",
+                "ms-azuretools.vscode-docker",
+                "github.vscode-github-actions",
+                "ms-vscode-remote.remote-containers"
+            ]
+        }
+    }
+}
