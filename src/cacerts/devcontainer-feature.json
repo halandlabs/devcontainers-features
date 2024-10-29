@@ -1,0 +1,17 @@
+{
+    "name": "cacerts",
+    "id": "cacerts",
+    "version": "1.0.0",
+    "description": "Adds additional certificate authorities to the host, node.js and Java",
+    "options": {
+        "base64_encoded_cacerts_str": {
+            "type": "string",
+            "default": "",
+            "description": "The base64 encoded string representation of the certificate(s). TODO; "
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/java",
+        "ghcr.io/devcontainers/features/node"
+    ]
+}
