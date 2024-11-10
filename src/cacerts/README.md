@@ -15,7 +15,7 @@ Adds additional certificate authorities to the host, node.js and Java
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| base64_encoded_cacerts_str | The base64 encoded string representation of the certificate(s). TODO;  | string | - |
+| base64_encoded_cacerts_str | The base64 encoded string representation of the certificates, delimited by semicolons. | string | - |
 
 
 
