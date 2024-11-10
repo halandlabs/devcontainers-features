@@ -39,7 +39,8 @@ BASE64_ENCODED_CACERTS=$(echo $BASE64_ENCODED_CACERTS_STR | tr ";" "\n")
 
 for BASE64_ENCODED_CACERT in $BASE64_ENCODED_CACERTS
 do
-    echo "${BASE64_ENCODED_CACERT}" | base64 --decode | tee "/usr/local/share/ca-certificates/dev-$(cat /proc/sys/kernel/random/uuid).crt"
+    BASE64_ENCODED_CACERT_FILE_NAME=$(echo "${BASE64_ENCODED_CACERT}" | md5sum | head --bytes 32)
+    echo "${BASE64_ENCODED_CACERT}" | base64 --decode | tee "/usr/local/share/ca-certificates/dev-${BASE64_ENCODED_CACERT_FILE_NAME}.crt"
 done
 
 update-ca-certificates
